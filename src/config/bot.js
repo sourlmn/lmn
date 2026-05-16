@@ -69,13 +69,13 @@ export const botConfig = {
     },
 
     // How long users must wait before submitting another application (hours).
-    applicationCooldown: 24, 
+    applicationCooldown: 3, 
 
     // Auto-delete denied applications after this many days.
-    deleteDeniedAfter: 7, 
+    deleteDeniedAfter: 2, 
 
     // Auto-delete approved applications after this many days.
-    deleteApprovedAfter: 30, 
+    deleteApprovedAfter: 14, 
 
     // Role IDs allowed to manage applications.
     managerRoles: [], // Will be populated from environment or database
@@ -136,7 +136,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "LEMON",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -156,21 +156,21 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "sprite",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "sprites",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "♡",
     },
 
     // Starting balance for new users.
-    startingBalance: 0,
+    startingBalance: 50,
 
     // Maximum bank amount before upgrades (if upgrades are used).
     baseBankCapacity: 100000,
 
     // Daily reward amount.
-    dailyAmount: 100,
+    dailyAmount: 20,
 
     // Work command random payout range.
     workMin: 10,
@@ -181,11 +181,11 @@ export const botConfig = {
     begMax: 50,
 
     // Chance to succeed when robbing (0.4 = 40%).
-    robSuccessRate: 0.4,
+    robSuccessRate: 0.3,
 
     // Jail time after failed rob (milliseconds).
     // 3600000 = 1 hour.
-    robFailJailTime: 3600000, 
+    robFailJailTime: 360000, 
   },
 
   // =========================
@@ -255,13 +255,13 @@ export const botConfig = {
 
     // Allowed winner count range.
     minimumWinners: 1,
-    maximumWinners: 10,
+    maximumWinners: 4,
 
     // Allowed giveaway duration range in milliseconds.
     // 300000 = 5 minutes.
     minimumDuration: 300000, 
     // 2592000000 = 30 days.
-    maximumDuration: 2592000000, 
+    maximumDuration: 86400000, 
 
     // Role IDs allowed to host giveaways.
     allowedRoles: [],
@@ -292,7 +292,7 @@ export const botConfig = {
     defaultMessage: "Click the button below to verify yourself and gain access to the server!",
 
     // Text on the verification button.
-    defaultButtonText: "Verify",
+    defaultButtonText: "VERIFY",
 
     // Automatic verification behavior.
     autoVerify: {
@@ -437,15 +437,15 @@ export const botConfig = {
   features: {
     // Core systems.
     economy: true,
-    leveling: true,
+    leveling: false,
     moderation: true,
     logging: true,
     welcome: true,
 
     // Community engagement systems.
-    tickets: true,
-    giveaways: true,
-    birthday: true,
+    tickets: false,
+    giveaways: false,
+    birthday: false,
     counter: true,
 
     // Security and self-service systems.
@@ -459,7 +459,7 @@ export const botConfig = {
     tools: true,
     utility: true,
     community: true,
-    fun: true,
+    fun: false,
   },
 };
 
