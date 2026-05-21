@@ -5,7 +5,7 @@ import { withErrorHandling, createError, ErrorTypes } from '../../utils/errorHan
 import { MessageTemplates } from '../../utils/messageTemplates.js';
 import { InteractionHelper } from '../../utils/interactionHelper.js';
 
-const ROB_COOLDOWN = 4 * 1 * 30 * 1000;
+const ROB_COOLDOWN = 4 * 60 * 60 * 1000;
 const BASE_ROB_SUCCESS_CHANCE = 0.25;
 const ROB_PERCENTAGE = 0.15;
 const FINE_PERCENTAGE = 0.1;
@@ -64,8 +64,8 @@ export default {
 
             if (now < lastRob + ROB_COOLDOWN) {
                 const remaining = lastRob + ROB_COOLDOWN - now;
-                const hours = Math.floor(remaining / (1000 * 1 * 30));
-                const minutes = Math.floor((remaining % (1000 * 1 * 30)) / (1 * 30));
+                const hours = Math.floor(remaining / (1000 * 60 * 60));
+                const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
 
                 throw createError(
                     "Robbery cooldown active",
